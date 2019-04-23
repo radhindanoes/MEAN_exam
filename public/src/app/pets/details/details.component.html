@@ -1,0 +1,45 @@
+<h2>Pet Details</h2>
+<table *ngIf="thisPet">
+    <tr>
+        <td class="tData">ID</td>
+        <td>{{thisPet._id}}</td>
+    </tr>
+            <tr>
+                <td class="tData">Name</td>
+                <td>{{thisPet.name}}</td>
+            </tr>
+    <tr>
+        <td class="tData">Type</td>
+        <td>{{thisPet.type}}</td>
+    </tr>
+    <tr>
+        <td class="tData">Description</td>
+        <td>{{thisPet.description}}</td>
+    </tr>
+    <tr>
+        <td class="tData">Skill One</td>
+        <td>{{thisPet.skillone}}</td>
+    </tr>
+    <tr>
+        <td class="tData">Skill Two</td>
+        <td>{{thisPet.skilltwo}}</td>
+    </tr>
+    <tr>
+        <td class="tData">Skill Three</td>
+        <td>{{thisPet.skillthree}}</td>
+    </tr>
+    <tr>
+        <td class="tData">Likes</td>
+        <td>{{thisPet.likes}}</td>
+
+        
+        
+    </tr>
+</table>
+<a [routerLink]="['/']"><button class="resetButton">BACK</button></a>
+<button class="deleteButton" (click)="deletePet()">DELETE</button>
+<button *ngIf="likeButton" class="likeButton" (click)="addLike()">LIKE</button>
+
+
+
+

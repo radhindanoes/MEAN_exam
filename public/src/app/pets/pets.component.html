@@ -1,0 +1,33 @@
+<h2>Pets List</h2>
+<a [routerLink]="['newpet']"><button id="aButton">Add New Pet</button></a>
+<br>
+<table class="table table-bordered" style="width: 100%">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Skill One</th>
+        <th>Skill Two</th>
+        <th>Skill Three</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pet of allPets">
+            <td>{{pet._id}}</td>
+            <td>{{pet.name}}</td>
+            <td>{{pet.type}}</td>
+            <td>{{pet.description}}</td>
+            <td>{{pet.skillone}}</td>
+            <td>{{pet.skilltwo}}</td>
+            <td>{{pet.skillthree}}</td>
+            <td>
+                <div class="goLeft">
+                    <a [routerLink]="[pet._id, 'edit']"><button  class="fancyButton" >edit</button></a>
+                    <a [routerLink]="[pet._id]"><button  class="fancyButton">details</button></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

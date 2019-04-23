@@ -1,0 +1,66 @@
+<h2>Update Pet</h2>
+
+<ul *ngIf="errors">
+  <li class="errors">{{errors}}</li>
+  </ul>
+
+<div  *ngIf="updatePet">  
+
+  <form name="editPetForm" #editPetForm="ngForm" (submit)="updatePet()">
+    <label for="name">Name</label><br>
+    <input type="text" name="thisPet.name"
+    
+    [(ngModel)]="thisPet.name"
+    #name="ngModel"
+    >
+    <br>
+    
+    <label for="type">Type</label><br>
+    <input type="text" name="thisAPet.type"
+    required
+    minlength="3"
+    [(ngModel)]="thisPet.type"
+    #type="ngModel"
+    >
+    <br>
+
+    <label for="description">Description</label><br>
+    <input type="text" name="thisPet.description"
+    required
+    minlength="3"
+    [(ngModel)]="thisPet.description"
+    #description="ngModel"
+    >
+    <br>
+
+    <label for="skillone">Skill One</label><br>
+    <input type="text" name="thisPet.skillone"
+    required
+    minlength="3"
+    [(ngModel)]="thisPet.skillone"
+    #skillone="ngModel"
+    >
+    <br>
+
+    <label for="skilltwo">Skill Two</label><br>
+    <input type="text" name="thisPet.skilltwo"
+    required
+    minlength="3"
+    [(ngModel)]="thisPet.skilltwo"
+    #skilltwo="ngModel"
+    >
+    <br>
+
+    <label for="skillthree">Skill Three</label><br>
+    <input type="text" name="thisPet.skillthree"
+    required
+    minlength="3"
+    [(ngModel)]="thisPet.skillthree"
+    #skillthree="ngModel"
+    >
+    <br>
+
+    <a [routerLink]="['/']"><button class="resetButton">RESET</button></a>
+    <input id="updateButton" type="submit" value="Edit This Pet" />
+  </form>
+</div>
